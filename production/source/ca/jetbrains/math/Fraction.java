@@ -1,5 +1,7 @@
 package ca.jetbrains.math;
 
+import java.util.Objects;
+
 public class Fraction {
     private int denominator;
     private int numerator;
@@ -33,6 +35,11 @@ public class Fraction {
             return this.numerator == that.numerator && this.denominator == that.denominator;
         }
         return false;
+    }
+
+    @Override
+    public int hashCode() {
+        return numerator * 19 + denominator;
     }
 
     @Override
