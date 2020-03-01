@@ -8,34 +8,35 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 public class addFractionTest {
+
+    private void checkAddFractionsAsInteger(int addend, int augend, int expectedResult) {
+        Fraction sum = new Fraction(addend).plus(new Fraction(augend));
+        assertEquals(new Fraction(expectedResult), sum);
+    }
+
     @Test
     public void zeroPlusZero() throws Exception {
-        Fraction sum = new Fraction(0).plus(new Fraction(0));
-        assertEquals(new Fraction(0), sum);
+        checkAddFractionsAsInteger(0, 0, 0);
     }
 
     @Test
     public void nonZeroPlusZero() throws Exception {
-        final Fraction sum = new Fraction(3).plus(new Fraction(0));
-        assertEquals(new Fraction(3), sum);
+        checkAddFractionsAsInteger(3, 0, 3);
     }
 
     @Test
     public void zeroPlueNonZero() throws Exception {
-        final Fraction sum = new Fraction(0).plus(new Fraction(5));
-        assertEquals(new Fraction(5), sum);
+        checkAddFractionsAsInteger(5, 0, 5);
     }
 
     @Test
     public void nonNegativeNonZeroOperands() throws Exception{
-        final Fraction sum = new Fraction(3).plus(new Fraction(4));
-        assertEquals(new Fraction(7), sum);
+        checkAddFractionsAsInteger(3, 4, 7);
     }
 
     @Test
     public void negativeInputAndNegativeOutput() throws Exception{
-        final Fraction sum = new Fraction(-3).plus(new Fraction(1));
-        assertEquals(new Fraction(-2), sum);
+        checkAddFractionsAsInteger(-3, 1, -2);
     }
 
     @Test
