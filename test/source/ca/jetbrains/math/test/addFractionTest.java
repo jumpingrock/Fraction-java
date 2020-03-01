@@ -11,37 +11,36 @@ public class addFractionTest {
     @Test
     public void zeroPlusZero() throws Exception {
         Fraction sum = new Fraction(0).plus(new Fraction(0));
-        assertEquals(0, sum.intValue());
+        assertEquals(new Fraction(0), sum);
     }
 
     @Test
     public void nonZeroPlusZero() throws Exception {
         final Fraction sum = new Fraction(3).plus(new Fraction(0));
-        assertEquals(3, sum.intValue());
+        assertEquals(new Fraction(3), sum);
     }
 
     @Test
     public void zeroPlueNonZero() throws Exception {
         final Fraction sum = new Fraction(0).plus(new Fraction(5));
-        assertEquals(5, sum.intValue());
+        assertEquals(new Fraction(5), sum);
     }
 
     @Test
     public void nonNegativeNonZeroOperands() throws Exception{
         final Fraction sum = new Fraction(3).plus(new Fraction(4));
-        assertEquals(7, sum.intValue());
+        assertEquals(new Fraction(7), sum);
     }
 
     @Test
     public void negativeInputAndNegativeOutput() throws Exception{
         final Fraction sum = new Fraction(-3).plus(new Fraction(1));
-        assertEquals(-2, sum.intValue());
+        assertEquals(new Fraction(-2), sum);
     }
 
     @Test
     public void nonTrivialDenominator() throws Exception{
         final Fraction sum = new Fraction(1,5).plus(2,5);
-        assertEquals(3, sum.getNumerator());
-        assertEquals(5, sum.getDenominator());
+        assertEquals(new Fraction(3,5), sum);
     }
 }
