@@ -4,13 +4,6 @@ public class Fraction {
     private int denominator;
     private int numerator;
 
-    public int getNumerator() {
-        return numerator;
-    }
-    public int getDenominator() {
-        return denominator;
-    }
-
     public Fraction(int integerValue) {
         this(integerValue, 1);
     }
