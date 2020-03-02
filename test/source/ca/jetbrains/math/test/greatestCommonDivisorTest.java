@@ -26,7 +26,6 @@ public class greatestCommonDivisorTest {
     public void oneIsMultipleOfTheOther() {
         assertEquals(3, NumberTheory.gcd(3,9));
         assertEquals(5, NumberTheory.gcd(5,30));
-
     }
 
     @Test
@@ -34,14 +33,12 @@ public class greatestCommonDivisorTest {
         assertEquals(2, NumberTheory.gcd(6,8));
         assertEquals(7, NumberTheory.gcd(49,315));
         assertEquals(4, NumberTheory.gcd(-24,-28));
-
     }
 
     @Test
     public void negatives() {
         assertEquals(4, NumberTheory.gcd(-24,28));
         assertEquals(4, NumberTheory.gcd(24,-28));
-
     }
 
     @Test

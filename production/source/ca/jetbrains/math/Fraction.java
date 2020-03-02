@@ -44,11 +44,7 @@ public class Fraction {
         final int gcd = NumberTheory.gcd(numerator, denominator);
         return new Fraction(numerator / gcd,denominator / gcd);
     }
-
-
-    public int intValue() {
-        return numerator;
-    }
+    
 
     @Override
     public boolean equals(Object other) {
