@@ -3,7 +3,6 @@ package ca.jetbrains.math.test;
 import ca.jetbrains.math.NumberTheory;
 import org.junit.Test;
 
-import static java.lang.Math.abs;
 import static org.junit.Assert.assertEquals;
 
 public class greatestCommonDivisorTest {

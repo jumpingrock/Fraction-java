@@ -9,7 +9,7 @@ import static org.junit.Assert.assertEquals;
 public class reduceFractionTest {
     @Test
     public void alreadyInLowestTerms() {
-    assertEquals(new Fraction(3,4), new Fraction(3,4));
+        assertEquals(new Fraction(3,4), new Fraction(3,4));
     //we already test this in fractionEqualTest
     }
 
@@ -21,5 +21,10 @@ public class reduceFractionTest {
     @Test
     public void reduceToWholeNumber() {
         assertEquals(new Fraction(6), new Fraction(24, 4));
+    }
+
+    @Test
+    public void reduceToZero() {
+        assertEquals(new Fraction(0), new Fraction(0, 2727293));
     }
 }
