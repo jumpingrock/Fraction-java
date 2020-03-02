@@ -36,4 +36,10 @@ public class fractionsEqualTest {
 
         assertNotEquals(new Fraction(5), new Fraction(2));
     }
+
+    @Test
+    public void negativeDenominator() {
+        assertEquals(new Fraction(1,2), new Fraction(-1,-2));
+        assertEquals(new Fraction(-1,2), new Fraction(1,-2));
+    }
 }
