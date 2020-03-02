@@ -14,7 +14,6 @@ public class reduceFractionTest {
     }
 
     @Test
-    @Ignore("waiting to implement gcd")
     public void reduceToNotWholeNumber() {
         assertEquals(new Fraction(3,4), new Fraction(6,8));
     }
