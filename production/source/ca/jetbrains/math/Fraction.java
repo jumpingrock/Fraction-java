@@ -31,13 +31,25 @@ public class Fraction {
         return new Fraction(this.numerator, denominator);
     }
 
-    public Fraction multiply(int numerator) {
+    public Fraction multiply(Fraction that) {
         if (this.denominator != 1){
-            return new Fraction(this.numerator + numerator * this.denominator, denominator);
+            return new Fraction(this.numerator + that.numerator * this.denominator, denominator);
         }else {
-            return new Fraction(this.numerator * numerator);
+            return new Fraction(this.numerator * that.numerator);
         }
+//        final Fraction abc = new Fraction (that.numerator * this.denominator, that.denominator * this.numerator);
+//        final int gcd = NumberTheory.gcd(abc.numerator, abc.denominator);
+//        return new Fraction(abc.numerator / gcd + abc.denominator / gcd);
+
     }
+
+    public Fraction multiply(int numerator, int denominator) {
+        numerator *= this.numerator;
+        denominator *= this.denominator;
+        final int gcd = NumberTheory.gcd(numerator, denominator);
+        return new Fraction(numerator / gcd,denominator / gcd);
+    }
+
 
     public int intValue() {
         return numerator;
