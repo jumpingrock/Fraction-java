@@ -42,6 +42,11 @@ public class multiplyFractionTest {
         assertEquals(new Fraction(1,1), new Fraction(5,4).multiply(4,5));
         assertEquals(new Fraction(1,1), new Fraction(10,3).multiply(3,10));
         assertEquals(new Fraction(5,3), new Fraction(5,3).multiply(3,3));
+    }
 
+    @Test
+    public void shouldMultiplyWithNegativeFraction() {
+        assertEquals(new Fraction(5,-3), new Fraction(5,-3).multiply(3,3));
+        assertEquals(new Fraction(250,1), new Fraction(-100,20).multiply(-100,2));
     }
 }
