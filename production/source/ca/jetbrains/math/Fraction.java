@@ -31,6 +31,14 @@ public class Fraction {
         return new Fraction(this.numerator, denominator);
     }
 
+    public Fraction multiply(int numerator) {
+        if (this.denominator != 1){
+            return new Fraction(this.numerator + numerator * this.denominator, denominator);
+        }else {
+            return new Fraction(this.numerator * numerator);
+        }
+    }
+
     public int intValue() {
         return numerator;
     }
