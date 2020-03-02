@@ -44,4 +44,11 @@ public class addFractionTest {
         final Fraction sum = new Fraction(1,5).plus(2,5);
         assertEquals(new Fraction(3,5), sum);
     }
+
+    @Test
+    public void differentDenominatorWithoutReducing() throws Exception {
+
+        final Fraction sum = new Fraction(1,2).plus(new Fraction(1,3));
+        assertEquals(new Fraction(5,6), sum);
+    }
 }
