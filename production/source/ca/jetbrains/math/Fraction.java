@@ -22,7 +22,6 @@ public class Fraction {
     public Fraction plus(Fraction that) {
 
         return new Fraction(this.numerator * that.denominator + that.numerator * this.denominator, this.denominator * that.denominator);
-
     }
 
     public Fraction plus (int numerator, int denominator) {
@@ -37,10 +36,6 @@ public class Fraction {
         }else {
             return new Fraction(this.numerator * that.numerator);
         }
-//        final Fraction abc = new Fraction (that.numerator * this.denominator, that.denominator * this.numerator);
-//        final int gcd = NumberTheory.gcd(abc.numerator, abc.denominator);
-//        return new Fraction(abc.numerator / gcd + abc.denominator / gcd);
-
     }
 
     public Fraction multiply(int numerator, int denominator) {

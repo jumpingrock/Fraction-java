@@ -40,5 +40,8 @@ public class multiplyFractionTest {
 //    @Ignore("to refactor multiplication to use Fraction before implementing")
     public void shouldMultiplyFractionWithFraction() {
         assertEquals(new Fraction(1,1), new Fraction(5,4).multiply(4,5));
+        assertEquals(new Fraction(1,1), new Fraction(10,3).multiply(3,10));
+        assertEquals(new Fraction(5,3), new Fraction(5,3).multiply(3,3));
+
     }
 }
